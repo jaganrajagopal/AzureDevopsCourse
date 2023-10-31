@@ -1,7 +1,9 @@
 **Step for Kubernetes on Ubuntu 20 for virtual machine ( any cloud machine)**
 
 **Step1:**
+
 **On Master & worker node**
+
 sudo su
 apt-get update  
 apt-get install docker.io -y
@@ -13,11 +15,14 @@ apt install kubeadm=1.20.0-00 kubectl=1.20.0-00 kubelet=1.20.0-00 -y
 
 **Step2:**
 **On Master:**
+
    kubeadm init --pod-network-cidr=192.168.0.0/16
-   >Copy the token and paste it into the worker node.
+   
+   Copy the token and paste it into the worker node.
+   
 **Step3:**
-On Master: 
-  exit
+****On Master Node:** **
+ 
     mkdir -p $HOME/.kube
     sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
     sudo chown $(id -u):$(id -g) $HOME/.kube/config
@@ -25,6 +30,9 @@ On Master:
 
    
 **step4:**
-**On Master:**
+
+**On Master Node:**
+
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
