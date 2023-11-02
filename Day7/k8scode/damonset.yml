@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: daemonsetnginx
+  namespace: default
+  labels:
+    app: nginxapps
+spec:
+  selector:
+    matchLabels:
+      app: nginxapps
+  template:
+    metadata:
+      labels:
+        app: nginxapps
+    spec:      
+      containers:
+      - name: nginxapps
+        image: nginx       
+        
+      

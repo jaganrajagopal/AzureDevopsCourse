@@ -1,0 +1,7 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: configdatabase
+  namespace: default
+data:
+  databasehost: "mysqlserver://db.server.com:1433"

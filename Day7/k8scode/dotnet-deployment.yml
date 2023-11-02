@@ -1,0 +1,30 @@
+       
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  dotnetdeployment
+  namespace: default
+  labels:
+    app:  dotnetappsdeploy
+spec:
+  selector:
+    matchLabels:
+      app: dotnetappsdeploy
+  replicas: 4
+  
+  template:
+    metadata:
+      labels:
+        app:  dotnetappsdeploy
+    spec:
+      # initContainers:
+        # Init containers are exactly like regular containers, except:
+          # - Init containers always run to completion.
+          # - Each init container must complete successfully before the next one starts.
+      containers:
+      - name:  dotnetappsdeploy
+        image:  11122233345/webappsdocker        
+        ports:
+        - containerPort: 80
+          name:  dotnetport
+        

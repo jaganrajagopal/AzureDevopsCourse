@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "dotnetpods"
+  namespace: default
+  labels:
+    app: "dotnetapps"
+spec:
+  containers:
+  - name: dotnetapps
+    image: "11122233345/dotnetwebapptraining"    
+    ports:
+    - containerPort: 80
+      name:  http
+    volumeMounts:
+    - name: dotnetvolume 
+      mountPath: /apps/dotnet
+  volumes:
+    - name: dotnetvolume
+      hostPath:
+        path: /mnt/dotnetapps/
+  restartPolicy: Always
