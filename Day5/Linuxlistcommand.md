@@ -1,74 +1,151 @@
-git init	Initialize a local Git repository
+utlizes commands
+echo, pwd, id, hostname, uname, ps, top, pstree, bg/fg, jobs, kill, touch
 
-git clone repo_url	Clone public repository
+ls, cd, cp, rm, mv, mkdir, ln, type, stat, file, du, chmod, chgrp (chown)
 
-git clone ssh://git@github.com/[username]/[repository-name].git	Clone private repository
+find, tar, gzip, sftp, rsync, man, nano (vim/emacs), less, ssh, ...
+grep, cat, tr, cut, sort, head, tail, uniq, col, xargs,
+date, wc, cal, nl, diff, alias, df, basename, w, split, tee,
+sed, awk, paste, ...
 
-git status	Check status
-git add [file-name]	Add a file to the staging area
 
-git add -A	Add all new and changed files to the staging area
-git commit -m "[commit message]"	Commit changes
+Basic comands in linux
+ls – lists a directory’s content.
 
-git rm -r [file-name.txt]	Remove a file (or folder)
+pwd – shows the current working directory’s path.
 
-git branch	List of branches (the asterisk denotes the current branch)
+cd – changes the working directory.
 
-git branch -a	List all branches (local and remote)
-git branch [branch name]	Create a new branch
+mkdir – creates a new directory.
 
-git branch -d [branch name]	Delete a branch
+rmdir – removes a folder or path.
 
-git branch -D [branch name]	Delete a branch forcefully
+rm – deletes a file.
 
-git push origin --delete [branch name]	Delete a remote branch
+cp – copies files and directories, including their content.
 
-git checkout -b [branch name]	Create a new branch and switch to it
+mv – moves or renames files and directories.
 
-git checkout -b [branch name] origin/[branch name]	Clone a remote branch and switch to it
+touch – creates a new empty file.
 
-git branch -m [old branch name] [new branch name]	Rename a local branch
+file – checks a file’s type.
 
-git checkout [branch name]	Switch to a branch
+zip and unzip – creates and extracts a ZIP archive.
 
-git checkout -	Switch to the branch last checked out
+tar – archives files without compression in a TAR format.
 
-git checkout -- [file-name.txt]	Discard changes to a file
+nano, vi, and jed – edits a file with a text editor.
 
-git merge [branch name]	Merge a branch into the active branch
+cat – lists, combines, and writes a file’s content as a standard output.
 
-git merge [source branch] [target branch]	Merge a branch into a target branch
-git stash	Stash changes in a dirty working directory 
+grep – searches a string within a file.
 
-git stash clear	Remove all stashed entries
+sed – finds, replaces, or deletes patterns in a file-> sed 's/unix/linux/' file.txt
 
-git push origin [branch name]	Push a branch to your remote repository
+head – displays a file’s first ten lines.
 
-git push -u origin [branch name]	Push changes to remote repository (and remember the branch)
+tail – prints a file’s last ten lines.
 
-git push	Push changes to remote repository (remembered branch)
+awk – finds and manipulates patterns in a file.-> awk '/manager/ {print}' employee.txt  awk '{print $1,$3,$4}' employee.txt
 
-git push origin --delete [branch name]	Delete a remote branch
+sort – reorders a file’s content.->sort mix.txt
 
-git pull  	Update local repository to the newest commit -> features -> .
+cut – sections and prints lines from a file.
 
-git pull origin [branch name]	Pull changes from remote repository
+diff – compares two files’ content and their differences.
 
-git remote add origin ssh://git@github.com/[username]/[repository-name].git	Add a remote repository
+tee – prints command outputs in Terminal and a file.
 
-git remote set-url origin ssh://git@github.com/[username]/[repository-name].git	Set a repository's origin branch to SSH
-git log	View changes
+locate – finds files in a system’s database.
 
-git log --summary	View changes (detailed)
+find – outputs a file or folder’s location.
 
-git log --oneline	View changes (briefly)
+sudo – runs a command as a superuser.
 
-git diff [source branch] [target branch]	Preview changes before merging
+su – runs programs in the current shell as another user.
 
-git revert commitid	Revert commit changes
+chmod – modifies a file’s read, write, and execute permissions--->
 
-git config --global user.name "your_username"	Set globally Username
+chmod u=rwx,g=r,o= filename
 
-git config --global user.email "your_email_address@example.com"	Set globally Email id
+chmod 750 dirname
 
-git config --global --list	Get global config
+chown – changes a file, directory, or symbolic link’s ownership.
+
+chown owner_name file_name
+
+useradd and userdel – creates and removes a user account.
+*****
+groupadd groupA
+df – displays the system’s overall disk space usage.
+
+du – checks a file or directory’s storage consumption.-> du -h
+
+top – displays running processes and the system’s resource usage.
+
+htop – works like top but with an interactive user interface.
+
+ps – creates a snapshot of all running processes.
+
+uname – prints information about your machine’s kernel, name, and hardware.
+
+hostname – shows your system’s hostname.
+
+time – calculates commands’ execution time.
+
+systemctl – manages system services.
+
+watch – runs another command continuously.->watch -n 3 date and watch -d df
+
+jobs – displays a shell’s running processes with their statuses.
+
+kill – terminates a running process.
+
+shutdown – turns off or restarts the system.
+
+ping – checks the system’s network connectivity.
+
+wget – downloads files from a URL.
+
+curl – transmits data between servers using URLs.
+
+scp – securely copies files or directories to another system.(NOt required)
+
+rsync – synchronizes content between directories or machines.
+
+Ifconfig – displays the system’s network interfaces and their configurations.
+
+netstat – shows the system’s network information, like routing and sockets.
+
+traceroute – tracks a packet’s hops to its destination.
+
+nslookup – queries a domain’s IP address and vice versa.
+
+dig – displays DNS information, including record types.
+
+history – lists previously run commands.
+
+man – shows a command’s manual.
+
+echo – prints a message as a standard output.
+
+ln – links files or directories.
+
+alias and unalias – sets and removes an alias for a file or command.
+
+cal – displays a calendar in Terminal.
+
+apt-get – manages Debian-based distros package libraries.
+
+*****
+useradd username
+
+adduser usera
+
+id username
+
+sudo groupadd group_name
+
+sudo usermod -a -G sec_group_name user-name
+
+
