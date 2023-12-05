@@ -6,9 +6,11 @@ kubectl get services
 kubectl get pods --all-namespaces
  
 # List all pods in the current namespace, with more details
+
 kubectl get pods -o wide   
 
 # List a particular deployment
+
 kubectl get deployment my-dep   
 
 # List all pods in the namespace
@@ -30,32 +32,35 @@ kubectl cluster-info                                             #cluster info f
 #### Deployment Module #######
 kubectl get deployment – List one or more deployments.
 
+
+
 kubectl describe deployment <deployment_name> – Display the detailed state of one or more deployments.
 
+**For example  the deploymentname  as dotnetdeployment**,
+
+kubectl describe deployment dotnetdeployment
+
+
 kubectl edit deployment <deployment_name> – Edit and update the definition of one or more deployments on the server.
+kubectl edit  deployment dotnetdeployment
 
 kubectl create deployment <deployment_name> – Create a new deployment.
+kubectl create deployment dotnetdeployment
 
 kubectl delete deployment <deployment_name> – Delete deployments.
+kubectl delete deployment dotnetdeployment
 
 kubectl rollout status deployment <deployment_name> – See the rollout status of a deployment.
+
+kubectl rollout status deployment dotnetdeployment
+
 kubectl rollout undo deployment/<deployment name> – Rollback a previous deployment.
+kubectl rollout undo deployment dotnetdeployment
 
 kubectl replace --force -f <configuration file> – Perform a replace deployment — Force
 
-####### Events happening on the cluster or node ####
-Events
-kubectl get events – List recent events for all resources in the system.
+kubectl replace --force -f deployment.yml
 
-kubectl get events --field-selector type=Warning – List Warnings only.
-
-kubectl get events --sort-by=.metadata.creationTimestamp – List events sorted by timestamp.
-
-kubectl get events --field-selector involvedObject.kind!=Pod – List events but exclude Pod events.
-
-kubectl get events --field-selector involvedObject.kind=Node, involvedObject.name=<node_name> – Pull events for a single node with a specific name.
-
-kubectl get events --field-selector type!=Normal – Filter out normal events from a list of events
 
 **###### Logs on the pods Level #######**
 
@@ -64,27 +69,23 @@ Logs – System component logs record events happening in cluster, which can be 
 
 kubectl logs <pod_name> – Print the logs for a pod.
 
-kubectl logs --since=6h <pod_name> – Print the logs for the last 6 hours for a pod.
+For example , suppose the  podname container 
+kubectl logs dotnetcontainer 
 
-kubectl logs --tail=50 <pod_name> – Get the most recent 50 lines of logs.
-
-kubectl logs -f <service_name> [-c <$container>] – Get logs from a service and optionally select which container.
-
-kubectl logs -f <pod_name> – Print the logs for a pod and follow new logs.
-
-kubectl logs -c <container_name> <pod_name> – Print the logs for a container in a pod.
-
-kubectl logs <pod_name> pod.log – Output the logs for a pod into a file named ‘pod.log’.
-
-kubectl logs --previous <pod_name> – View the logs for a previously failed pod.
 
 **####### Pods ######**
-
+-- list of the pods 
 kubectl get pod – List one or more pods.
 
-kubectl get pods --sort-by='.status.containerStatuses[0].restartCount' – List pods Sorted by Restart Count.
+ –-List pods Sorted by Restart Count.
+ 
+kubectl get pods --sort-by='.status.containerStatuses[0].restartCount'
 
-kubectl get pods --field-selector=status.phase=Running – Get all running pods in the namespace.
+– Get all running pods in the namespace.
+
+kubectl get pods --field-selector=status.phase=Running 
+
+–- Delete a pod.
 
 kubectl delete pod <pod_name> – Delete a pod.
 
@@ -98,21 +99,33 @@ kubectl exec -it <pod_name> /bin/sh – Get an interactive shell on a single-con
 
 ###### Rollback commands   #####
 
-kubectl set image deployment/frontend www=image:v2               # Rolling update "www" containers of "frontend" deployment, updating the image
-kubectl rollout history deployment/frontend                      # Check the history of deployments including the revision
-kubectl rollout undo deployment/frontend                         # Rollback to the previous deployment
-kubectl rollout undo deployment/frontend --to-revision=2         # Rollback to a specific revision
-kubectl rollout status -w deployment/frontend                    # Watch rolling update status of "frontend" deployment until completion
-kubectl rollout restart deployment/frontend                      # Rolling restart of the "frontend" deployment
+# Check the history of deployments including the revision
+
+kubectl rollout history deployment/frontend 
+
+ # Rollback to the previous deployment
+ 
+kubectl rollout undo deployment/frontend     
+
+# Rollback to a specific revision
+
+kubectl rollout undo deployment/frontend --to-revision=2   
+
+# Watch rolling update status of "frontend" deployment until completion
+kubectl rollout status -w deployment/frontend    
+
+ # Rolling restart of the "frontend" deployment
+kubectl rollout restart deployment/frontend                    
 
 **#Rolling Updates and Rollbacks**
+
 kubectl set image pods/podsapps appsdotnet=nginx:1.191
 pod/podsapps image updated
 
  kubectl describe pods podsapps
 
 
-kubectl rollout undo deployment/test-deploy --to-revision=3
+  kubectl rollout undo deployment/test-deploy --to-revision=3
  kubectl set image deployment/dotnet-deploy dotnetcontainer=11122233345/dotnetwebappsdemo
  kubectl  describe deployment/dotnet-deploy   
  kubectl rollout status history deployment/dotnet-deploy
