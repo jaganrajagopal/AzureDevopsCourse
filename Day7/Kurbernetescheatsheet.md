@@ -126,10 +126,17 @@ pod/podsapps image updated
 
 
   kubectl rollout undo deployment/test-deploy --to-revision=3
+  
  kubectl set image deployment/dotnet-deploy dotnetcontainer=11122233345/dotnetwebappsdemo
+ 
  kubectl  describe deployment/dotnet-deploy   
+ 
  kubectl rollout status history deployment/dotnet-deploy
- kubectl rollout status  deployment/dotnet-deploy       
+ 
+ kubectl rollout status  deployment/dotnet-deploy  
+ 
  kubectl rollout history  deployment/dotnet-deploy
+ 
  kubectl rollout undo deployment --to-revision=1
+ 
  kubectl  describe deployment/dotnet-deploy
