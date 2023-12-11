@@ -1,7 +1,11 @@
+Please check our website :https://awstrainingwithjagan.com/
+
+Check  My Linkedinprofie :https://www.linkedin.com/in/jagan-rajagopal/
+
 # AzureDevopsCourse
 Azure Devops course
 
-1.	Introduction to CloudComputing  ( 1 Day – First Week  )
+**1.	Introduction to CloudComputing  ( 1 Day – First Week  )**
     •	Cloud computing – what is it and why compared to On-premise
   
     •	Different Cloud Vendors
@@ -51,7 +55,7 @@ Azure Devops course
     Lab:How to make sure that virtual machine is accessible via corporate network. 
 
 
-3.	Linux  ( 4Day )
+**3.	Linux  ( 4Day )**
   
   •	Introduction to Linux 
   
@@ -73,7 +77,7 @@ Azure Devops course
   Lab : How to host the webapplication on tomcat or Apache (Webserver) on linux machine
   Lab: How to check the error logs of application 
 
-4.	Version Control with Git & GitHub ( 5,  6 and 7th Day )
+**4.	Version Control with Git & GitHub ( 5,  6 and 7th Day )**
 
   •	Version Control
 
@@ -103,7 +107,7 @@ Azure Devops course
   
   •	Lab: How to solve or resolve the merge conflict in Github account 
 
-5.Containerization using Docker ( 8th , 9th and 10th Day)
+**5.Containerization using Docker ( 8th , 9th and 10th Day)**
 
   •	Containerization
   
@@ -156,8 +160,8 @@ Azure Devops course
     Lab: How to integrate with docker network and persist the data , after restart of the docker application 
 
 
-
-7. Orchestration using Kubernetes(11th , 12th , 13th ,14th Day)
+**
+7. Orchestration using Kubernetes(11th , 12th , 13th ,14th Day)**
 
   •	Introduction to Container Orchestration (AKS and EKS)
   
@@ -205,7 +209,7 @@ Lab: How to deploy the front end and backend application on the aks cluster
 Lab: How to use the secret key for database connection on the AKS cluster 
 
 
-8 . Overview of Azure DevOps ( 15th Day and 16th Day)
+**8 . Overview of Azure DevOps ( 15th Day and 16th Day)**
 
   •	Introduction to Azure DevOps
   
@@ -274,7 +278,7 @@ Lab: How to deploy the  docker  image on the Azure or AWS cloud machine .
 Lab: How to run the multiple node of application on Jenkins pipeline 
 
 
-11. Monitoring using Prometheus and Grafana (23th  Day, 24th Day ) 
+**11. Monitoring using Prometheus and Grafana (23th  Day, 24th Day ) **
 
   •	Introduction to Prometheus and Grafana
   
@@ -292,7 +296,7 @@ Lab: How to run the multiple node of application on Jenkins pipeline
   	
   •	Lab: How to monitoring the application on Dashboard 
   •	Lab: How to integrate of metrics and alert on Granfa tools 
-9. Provisioning using Terraform ( 25th day , 26th Day)
+**9. Provisioning using Terraform ( 25th day , 26th Day)**
 
   •	Introduction to Terraform
   
@@ -332,7 +336,7 @@ Lab: How to reuse of Terraform module for different environment in the Terraform
 Lab : How to integrate the terraform code pipeline with gitlab
   
 
-10. Configuration Management Using Ansible ( 27th Day ,28th Day)
+**10. Configuration Management Using Ansible ( 27th Day ,28th Day)**
 
   •	Introduction to Configuration Management
   
@@ -386,7 +390,7 @@ Lab : How to integrate the terraform code pipeline with gitlab
   •	Lab : How to deploy on the Nodejs application using AWS Pipeline tools
   •	Lab: How to integrate with Codebuild, Codedeploy and deploy on the ec2 instance 
 •	
-13. AWS EC2 and IAM ( 31th Day and 31th Day)
+**13. AWS EC2 and IAM ( 31th Day and 31th Day)**
 
   •	Virtualization
   
@@ -480,7 +484,7 @@ Lab : How to integrate the terraform code pipeline with gitlab
 
 
 
-15. Python Basics ( 37th to 40th Days )
+**15. Python Basics ( 37th to 40th Days )**
 
   •	Introduction to Python
   
