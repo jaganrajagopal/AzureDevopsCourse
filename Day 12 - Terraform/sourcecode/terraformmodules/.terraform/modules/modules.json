@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"azure_rsggroup","Source":"../dev","Dir":""},{"Key":"azure_rsgdevgroup","Source":"./modules/resourcegroup","Dir":"modules/resourcegroup"},{"Key":"azure_Dev","Source":"./dev","Dir":"dev"}]}
